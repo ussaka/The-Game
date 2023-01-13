@@ -45,8 +45,8 @@ class The_Game:
                              self.__display_height / 2 - (self.robot_height / 2))
         self.clock = pygame.time.Clock()
 
-        self.font = pygame.font.SysFont("Comic Sans", 50)
-        self.font2 = pygame.font.SysFont("Comic Sans", 200)
+        self.font = pygame.font.SysFont("Comic Sans", 30)
+        self.font2 = pygame.font.SysFont("Comic Sans", 180)
         pygame.display.set_caption("The Game")
 
         self.game_loop()
