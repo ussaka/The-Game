@@ -6,6 +6,6 @@ The game's goal is to collect coins and avoid monsters. You can end your run and
 
 # Screenshots
 <p align="left">
-  <img src=Screenshots/Capture.PNG width="800" alt="Screenshot from the game">
-  <img src=Screenshots/Capture.PNG1.PNG width="800" alt="Screenshot from the game">
+  <img src=Screenshots/Capture.PNG width="450" alt="Screenshot from the game">
+  <img src=Screenshots/Capture.PNG1.PNG width="450" alt="Screenshot from the game">
 </p>
