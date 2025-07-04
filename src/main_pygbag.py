@@ -87,12 +87,12 @@ class The_Game:
         for i in range(self.doors_pcs):
             self.doors.append([-1000, self.__display_height])
 
-    def game_loop(self):
-        self.running = True
+    async def game_loop(self):
         while self.running:
             self.player_movement()
             self.items_location()
             self.draw_display()
+            await asyncio.sleep(0)  # Allow browser to handle other tasks
 
     def draw_display(self):
         self.display.fill((51, 52, 50))
@@ -268,21 +268,10 @@ class The_Game:
         self.score = 0
 
 
-if __name__ == "__main__":
+async def main():
     game = The_Game()
+    await game.game_loop()
 
-    # For pygbag compatibility
-    try:
-        import asyncio
 
-        async def main():
-            while game.running:
-                game.player_movement()
-                game.items_location()
-                game.draw_display()
-                await asyncio.sleep(0)
-
-        asyncio.run(main())
-    except ImportError:
-        # Fallback for regular Python execution
-        game.game_loop()
+if __name__ == "__main__":
+    asyncio.run(main())
